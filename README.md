@@ -1,16 +1,19 @@
 # Enigma
 
-**:closed_lock_with_key: Secure and authenticate your files**
-This project is consisted of 2 programs:
-(1) Encryptor - encrypts hybridly your file and signs it digitally.
-(2) Decryptor - verifies the authenticity of the file's digital signature, and if verified decrypts the file.  
-**:technologist: Architecture**
+**:closed_lock_with_key: Secure and authenticate your files**  
+---- 
+**:computer: This project is consisted of 2 programs**  
+(1) Encryptor - encrypts hybridly your file and signs it digitally.  
+(2) Decryptor - verifies the authenticity of the file's digital signature, and if verified decrypts the file.    
+
+**:technologist: Architecture**  
 The programs follow the Java Crypto Architecture - and they're _algorithm and provider independent_.  
 For each cryptographic operation you can specify in the appropriate `.properties` file the desired algorith, provider and more specification of your choice, such as mode/padding/key-length/IV-length etc...
 
 ## Prerequisites
 
-- You need [Java/JDK]() installed to run the application locally, and to generate a `KeyStore` to save a `key pair` of your own, by using `Key Tool`
+You need [Java/JDK]() installed to run the application locally, and to generate a `KeyStore`  
+to save a `key pair` of your own, by using [Key Tool](https://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html)
 
 ## Installation
 
@@ -87,38 +90,44 @@ Run the following commands in your terminal:
 
 ## Run
 
-- _Encryptor_:
-  Run the following command with your own parameters in the terminal:
+- _Encryptor_:  
+  Run the following command with your own parameters in the terminal:  
 
   ```
   java -jar EncryptorProgram.jar <SenderKeyStorePassword> <SenderPrivateKeyPassword> <EncryptorUserInputFilePath>.properties
   ```
 
-  You can use the existing example:
+  You can use the existing example:  
 
   ```
   java -jar EncryptorProgram.jar Se@3536dm Se@3536dm ./Resources/encryptorUserInput.properties
   ```
 
-- Send / Receive the Encryptor's 2 output files. In default, their names are:
+- Send / Receive the Encryptor's 2 output files. In default, their names are:  
   - `ciphertext.txt`
   - `decryptorConfig.properties`
-- _Decryptor_:
-  Run the following command with your own parameters in the terminal:
+- _Decryptor_:  
+  Run the following command with your own parameters in the terminal:  
 
   ```
   java -jar DecryptorProgram.jar <ReceiverKeyStorePassword> <ReceiverPrivateKeyPassword> <DecryptorUserInputFilePath>.properties
   ```
 
-  You can use the existing example:
+  You can use the existing example:  
 
   ```
   java -jar DecryptorProgram.jar Ce@1998cg Ce@1998cg ./Resources/decryptorUserInput.properties
   ```
 
-## Documentation and more about this project
+## Documentation and More
+Can be found in file: `/Documentation.docx`.  
+Including:  
+- Screen-shot examples of using `Key Tool`.
+- Details of the `.properties` files.
+- Class diagram.
+- Explenation about the cryptographic decisions we made.
+- And more.  
 
-- Can be found in file: `/Documentation.docx`.
 
 ## Authors
 
