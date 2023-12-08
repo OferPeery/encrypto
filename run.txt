@@ -1,0 +1,6 @@
+javac EncryptorUserInput.java EncryptorLogic.java EncryptorProgram.java
+jar -cfm EncryptorProgram.jar manifestEncryptor.txt EncryptorUserInput.class EncryptorLogic.class EncryptorProgram.class
+java -jar EncryptorProgram.jar Se@3536dm Se@3536dm ./Resources/encryptorUserInput.properties
+javac DecryptorUserInput.java DecryptorLogic.java DecryptorProgram.java
+jar -cfm DecryptorProgram.jar manifestDecryptor.txt DecryptorUserInput.class DecryptorLogic.class DecryptorProgram.class
+java -jar DecryptorProgram.jar Ce@1998cg Ce@1998cg ./Resources/decryptorUserInput.properties
