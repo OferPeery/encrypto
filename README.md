@@ -1,4 +1,4 @@
-# Enigma
+# Encrypto
 
 **:closed_lock_with_key: Secure and authenticate your files**  
 ---- 
